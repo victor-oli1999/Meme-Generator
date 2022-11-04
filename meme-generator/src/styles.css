@@ -1,0 +1,70 @@
+body {
+    background: #E5E5E5;
+    font-family: "Inter";
+}
+#root {
+    margin: auto;
+    padding: 20px 0;
+    width: 550px;
+}
+h1 {
+    font-size: 20px;
+    font-weight: 500;
+}
+h2 {
+    font-size: 12px;
+    font-weight: 400;
+}
+.white {
+    color: #fff;
+}
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(to right, rgba(103, 34, 128, 1), rgba(166, 38, 211, 1));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.left {
+    display: flex;
+    align-items: center;
+}
+.troll_Face {
+    width: 32px;
+    margin-right: 13px;
+}
+/* CONTENT */
+.content {
+    background: #fff;  
+    padding: 40px 30px;
+}
+.firstLine {
+    display: flex;
+    justify-content: space-between;
+}
+input {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+    width: 215px;
+}
+.submit {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 30px 0;
+    position: relative;
+}
+#submit {
+    background: linear-gradient(to right, rgba(103, 34, 128, 1), rgba(166, 38, 211, 1));
+    border: none;
+    font-size: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    width: 100%;
+}
+.meme {
+    text-align: center;
+    margin-top: 80px;
+}
