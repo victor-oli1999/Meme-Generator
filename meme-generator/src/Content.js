@@ -2,15 +2,24 @@ import React from "react"
 import memesData from "./memesData"
 
 export default function Content() {
-    let [memeImage, setMemeImage] = React.useState("");
+    let [meme, setMeme] = React.useState({
+        topText: "", 
+        bottomText: "", 
+        randomImage: ""
+    });
+
+    let [allMemesImages, setAllMemesImages] = React.useState(memesData);
 
     function getNewMeme() {
         // Acessa o arquivo com os dados dos memes.
-        const memesArrays = memesData.data.memes
+        const memesArrays = allMemesImages.data.memes
         // Escolhe aleatoriamente o número que irá acessar no array.
         const randomNumber = Math.floor(Math.random() * memesArrays.length)
         // Pega a imagem e mostra ela.
-        setMemeImage(memesArrays[randomNumber].url)
+        let url = memesArrays[randomNumber].url;
+        setMeme(prevMeme => ({
+            ...prevMeme, 
+            randomImage: url}))
     }
     
     return (
@@ -24,7 +33,7 @@ export default function Content() {
                     <button className="button white" onClick={getNewMeme} >Get a new meme image</button>
                 </div>
                 <div className="meme">
-                    <img src={memeImage} />
+                    <img src={meme.randomImage} />
                 </div>
             </div>
         </main>
